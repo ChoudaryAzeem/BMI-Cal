@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>BMI CALCULATOR</h1>
+    </div>
+    <div class="para">
+        <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and
+            women.<br /><a class="View" href="./table.html">View the BMI tables </a> or use the tool below to compute
+            yours.</p>
+    </div>
+    <div class="btn">
+        <button><a href="./Bmi.html">Calculate Your BMI</a></button>
+    </div>
+    <div class="img">
+        <img src="./images/bmi-chart.jpg">
+    </div>
+
+
+
+    <script>
+        
+        let Weight = prompt("Enter your weight(kilogram)");
+        let Height = prompt("Enter your height(feet)");
+
+        Weight = Number(Weight);
+        Height = Number(Height);
+
+        Height = Height * Height
+        let bmi = (Weight / Height)
+
+        let BMI = ("Your Body Mass is" + bmi + ' And ')
+
+        if (bmi < 1.85) {
+            alert( + 'you are Underweight ')
+        } else if (bmi < 2.5) {
+            alert(BMI + 'you are Normal ')
+        } else if (bmi < 3.0) {
+            alert(BMI + 'you are Overweight ')
+        } else if (bmi < 4.0) {
+            alert(BMI + 'you are Obese ')
+        } else if (bmi > 4.0) {
+            alert(BMI + 'you are Morbidly Obese ')
+        }
+    </script>
+</body>
+
+</html>
